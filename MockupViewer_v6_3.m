@@ -25,10 +25,8 @@ function config = createConfig()
     config.plot.batchSize = 30; config.plot.xRangeSec = 10;
     config.plot.fixedYlim = true;
     config.plot.eegMaximumNumPoints = config.eeg.fs * config.plot.xRangeSec;
-    % config.fnirs.pairs = [1 1; 2 1; 1 2; 2 2; 2 3; 3 2; 3 3; 4 3; 3 4; 4 4; 4 5; 5 4; 5 5];
-    % config.fnirs.pairs = [1 1; 2 1; 3 1; 4 1; 5 1];
-    config.fnirs.pairs = [1 1; 1 2; 1 3; 1 4; 1 5];
-
+    config.fnirs.pairs = [1 1; 2 1; 1 2; 2 2; 2 3; 3 2; 3 3; 4 3; 3 4; 4 4; 4 5; 5 4; 5 5];
+   
     config.filter.apply = true;
     [config.filter.b_n60, config.filter.a_n60] = butter(3, [59 61]/(config.eeg.fs/2), 'stop');
     [config.filter.b_n50, config.filter.a_n50] = butter(3, [49 51]/(config.eeg.fs/2), 'stop');
